@@ -1,0 +1,12 @@
+content defaultfullzoomlevel chrome/content/
+
+overlay chrome://browser/content/browser.xul chrome://defaultfullzoomlevel/content/browserOverlay34.xul appversion>=34.0a1
+
+skin  defaultfullzoomlevel  classic/1.0 chrome/skin/classic/aero/ os=WINNT
+skin  defaultfullzoomlevel  classic/1.0 chrome/skin/classic/ os!=WINNT
+
+style chrome://browser/content/browser.xul  chrome://defaultfullzoomlevel/skin/browserOverlay29.css
+style chrome://global/content/customizeToolbar.xul  chrome://defaultfullzoomlevel/skin/browserOverlay4.css
+
+locale defaultfullzoomlevel en-US chrome/locale/en-US/
+locale defaultfullzoomlevel ja chrome/locale/ja/

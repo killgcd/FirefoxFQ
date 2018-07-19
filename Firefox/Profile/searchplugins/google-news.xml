@@ -1,0 +1,11 @@
+<SearchPlugin xmlns="http://www.mozilla.org/2006/browser/search/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/">
+<os:ShortName>Google News</os:ShortName>
+<os:InputEncoding>UTF-8</os:InputEncoding>
+<os:Image width="16" height="16">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAADRUlEQVQ4jSXT60/VdQDH8c/vd7AlI4EHtjW0WCs1i7U2i8u54GWxYDVtpkabumX5JLs86oLYEgRDQjAIBbsYayTmCjDQMwsrtcgxUBdWkNyyJDkCB9jRw+/8vu8e8OD9D7y2tyTJiUFX/wipWxuJe/pzSo9fwiVGNDzB2ewsei0xa9u4Eq5sIpYYl5AkxRwwwLriU2hTEHtbFwte/I6//p0CEyPyWy/XE+JxJYzlwbVExBIhxTFkCwE4jsMDO9rRtk60vQfl/0jxN5fBgInBUE4OUVnEPCJqWUzKw5glBiVkXCAG3sIO7M0/Y2/vxH7hHJv2dwMOAFfXr2NGcWAJVx6mLfGPRJ/tQeACLkVNl9H6IHEvXcB+/nvyqzpxMXAbfnloGT/dcwctS5JpT02mK2kew7botYT6h29igNFwhGU72tBzp1mwOUiw5xoGqGs5zOI3UtFH6Xhq/ajay/yyJ8h6OY19DyeipVs+43jHFXANE1NRjpwZoG/kJi6GklN1qOgRPPVePIeyUG06qs3EOpCFqrOx9q5GCzceJWntx6x+vZE9DR1zajic6fsV+6370OHHUV06qk/HqvFh1fhQZQZWuR9rbwAtzW9g0YYvuDPvU5KfOsTgaBhjDMOhayypfxbVpGEfzMQ+6EU1GdgferEq/djlflSWge7P3U/Glk/Y+G4rr1X9QE/fOC4Gg8vY1Bg5R1/BqkhDtT5U7Z2r0o/2+dEeP2o8fZGxcRcDzE72Mnq1mYGeWm5N3wBgNuaQ2/gqVsVyVJ2BqrzY5ZnofR8q8SFcmP7vIt3NGQw2x/N3mxj52uZK03LCoT/BxPh9dIi7SrNRVSaeD3zYZX5UEkC7A+i2M0NXYzoT3wpz3sY5G0+kYz43jon+5jyMMZgYPHhgAypbgSq8qNTPvN1rsHYF0FRogD8aUrgVTCIcTGCqLZHJ1kRmTqRw/atHITpNxDEsLslDpZnYJatQqQ/7vZVopx85McPgya2EvkxgsuVuwq0LmTmRQvjYvYyfK8QATRdO4nnzMaxiL56ibLQrgAoC6J01c0c6MyHGzhcy0b6WcMuTTLQ/Q6S7mqgT4dLwAIvezkUFK7ALs1HhSrTThwpWIUn/A1g/hnpCRmiJAAAAAElFTkSuQmCC</os:Image>
+<SearchForm>http://news.google.com/nwshp</SearchForm>
+<os:Url type="text/html" method="GET" template="http://news.google.com/news" resultDomain="news.google.com">
+  <os:Param name="pz" value="1"/>
+  <os:Param name="ned" value="us"/>
+  <os:Param name="q" value="{searchTerms}"/>
+</os:Url>
+</SearchPlugin>

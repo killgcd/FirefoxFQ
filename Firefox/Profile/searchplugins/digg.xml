@@ -1,0 +1,10 @@
+<SearchPlugin xmlns="http://www.mozilla.org/2006/browser/search/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/">
+<os:ShortName>Digg</os:ShortName>
+<os:InputEncoding>UTF-8</os:InputEncoding>
+<os:Image width="16" height="16">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA60lEQVQ4jZ2TuwrCMBSG8x7BC4KISKlFcXQWfIB4Q0RLVHwDd/eoeInVtasv0NXBwcXZSZA+xu8WGylieuDjz3+GD84Qcrk/6825f6VMwITm3L9e7s86sbkMLVeiNjsZYbkSNpchoUygOj0mgjIBQplAZXpMhBI4Yw/O2AMALX/RWZw/gjI/oMwPAKDe/6AE0bFcqeX3Pto1QWm0N05NUBzujDP2hMJgq+X3PtqVIN/f/ARAbFeCXG8dS3TiuhJku+tEKEGms0oEZQLEmXivVGuJdNuMVGsJZ+K9SHB7NGwuQ9PvbHMZBrdH4w0vpnHZSaAJ0gAAAABJRU5ErkJggg==</os:Image>
+<SearchForm>http://digg.com/</SearchForm>
+<os:Url type="text/html" method="GET" template="http://digg.com/search" resultDomain="digg.com">
+  <os:Param name="q" value="{searchTerms}"/>
+  <os:Param name="submit" value=""/>
+</os:Url>
+</SearchPlugin>

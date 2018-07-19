@@ -1,0 +1,407 @@
+{
+  "google" : {
+     "urlexp" : "http(?:s)?:\\/\\/(?:www[0-9]*\\.|encrypted\\.)(?:l\\.)?google\\..*\\/.*[?#&]q=([^&]+)",
+     "rankometer" :  {
+      "url"   :"http(?:s)?:\\/\\/(?:www[0-9]*\\.|encrypted\\.)(?:l\\.)?google\\..*\\/",
+      "reload": true,
+      "hide": true,
+      "xpath" : {
+        "block": [
+          "//div/ol/li[ contains( concat( ' ', normalize-space(@class), ' ' ),concat( ' ', 'g', ' ' ) ) ]",
+          "//div/ol/li[ contains( concat( ' ', normalize-space(@class), ' ' ),concat( ' ', 'g', ' ' ) ) ]",
+          "//div/ol/li[ contains( concat( ' ', normalize-space(@class), ' ' ),concat( ' ', 'g', ' ' ) ) ]",
+          "//div/ol/div/li[ contains( concat( ' ', normalize-space(@class), ' ' ),concat( ' ', 'g', ' ' ) ) ]",
+          "//div[ contains( concat( ' ', normalize-space(@id), ' ' ),concat( ' ', 'search', ' ' ) ) ]//div[ contains( concat( ' ', normalize-space(@id), ' ' ),concat( ' ', 'ires', ' ' ) ) ]//div[ contains( concat( ' ', normalize-space(@class), ' ' ),concat( ' ', 'g', ' ' ) ) ]"
+        ],
+        "insert" : [
+          "./div/div/div/cite",
+          "./div/div[ contains( concat( ' ', normalize-space(@class), ' ' ),concat( ' ', 'kv', ' ' ) ) ]/cite",
+          "./div/div/div/div[ contains( concat( ' ', normalize-space(@class), ' ' ),concat( ' ', 'kv', ' ' ) ) ]/cite",
+          "./div/div/div/div[ contains( concat( ' ', normalize-space(@class), ' ' ),concat( ' ', 'kv', ' ' ) ) ]/cite",
+          "./div[ contains( concat( ' ', normalize-space(@class), ' '), ' rc ')]/div/div/div[ contains( concat( ' ', normalize-space(@class), ' ' ),concat( ' ', 'kv', ' ' ) ) ]/cite"
+        ],
+        "target" : [
+          "./div/h3[ contains( concat( ' ', normalize-space(@class), ' '), ' r ')]/descendant::a/@href",
+          "./h3[ contains( concat( ' ', normalize-space(@class), ' '), ' r ')]/descendant::a/@href",
+          "./div/h3[ contains( concat( ' ', normalize-space(@class), ' '), ' r ')]/descendant::a/@href",
+          "./div/h3[ contains( concat( ' ', normalize-space(@class), ' '), ' r ')]/descendant::a/@href",
+          "./div[ contains( concat( ' ', normalize-space(@class), ' '), ' rc ')]/h3[ contains( concat( ' ', normalize-space(@class), ' '), ' r ')]/descendant::a/@href"
+        ]
+      }
+    },
+    "cba" :  {
+      "url"   :"http(?:s)?:\\/\\/(?:www([0-9])?|encrypted)\\.(l\\.)?google\\..*\\/",
+      "reload": true,
+      "hide": true,
+      "xpath" : {
+        "block": [
+          "//div[ contains( concat( ' ', normalize-space(@id), ' ' ),concat( ' ', 'tads', ' ' ) ) ]/ol/li"
+          ,"//div[ contains( concat( ' ', normalize-space(@id), ' ' ),concat( ' ', 'tadsb', ' ' ) ) ]/ol/li"
+          ,"//div[ contains( concat( ' ', normalize-space(@id), ' ' ),concat( ' ', 'tads', ' ' ) ) ]/ol/li"
+          ,"//div[ contains( concat( ' ', normalize-space(@id), ' ' ),concat( ' ', 'tads', ' ' ) ) ]/ol/li"
+          ,"//div[ contains( concat( ' ', normalize-space(@id), ' ' ),concat( ' ', 'mbEnd', ' ' ) ) ]/ol/li"
+          ,"//table[ contains( concat( ' ', normalize-space(@id), ' ' ),concat( ' ', 'mbEnd', ' ' ) ) ]/tbody/tr/td/ol/li"
+          ,"//table[ contains( concat( ' ', normalize-space(@id), ' ' ),concat( ' ', 'mbEnd', ' ' ) ) ]/tbody/tr/td/ol/li"
+          ,"//table[ contains( concat( ' ', normalize-space(@id), ' ' ),concat( ' ', 'mbEnd', ' ' ) ) ]/tbody/tr/td/ol/li"
+        ],
+        "insert" : [
+          "./div/cite"
+          ,"./div/cite"
+          ,"./div/div[ contains( concat( ' ', normalize-space(@class), ' ' ),concat( ' ', 'kv', ' ' ) ) ]/cite"
+          ,"./div/div/div[ contains( concat( ' ', normalize-space(@class), ' ' ),concat( ' ', 'kv', ' ' ) ) ]/cite"
+          ,"./div/cite"
+          ,"./div/div[ contains( concat( ' ', normalize-space(@class), ' ' ),concat( ' ', 'kv', ' ' ) ) ]/cite"
+          ,"./div/div/div/span[ contains( concat( ' ', normalize-space(@class), ' ' ),concat( ' ', 'a', ' ' ) ) ]"
+          ,"./div/div/span[ contains( concat( ' ', normalize-space(@class), ' ' ),concat( ' ', 'a', ' ' ) ) ]"
+
+        ],
+        "target" : [
+          "./descendant::h3/descendant::a/@href"
+          ,"./descendant::h3/descendant::a/@href"
+          ,"./div/descendant::h3/descendant::a/@href"
+          ,"./div/descendant::h3/descendant::a/@href"
+          ,"./descendant::h3/descendant::a/@href"
+          ,"./div/descendant::h3/descendant::a/@href"
+          ,"./div/descendant::div/descendant::div/descendant::a/@href"
+          ,"./div/descendant::div/descendant::a/@href"
+        ]
+      }
+    }
+  },
+  "amazon": {
+     "urlexp" : "http(?:s)?:\\/\\/www\\.amazon\\..*\\/gp\\/bit\\/apps\\/web\\/SERP\\/search.*[?#&]q=([^&]+)",
+      "rankometer" :  {
+      "hide":true,
+      "url" : "http(?:s)?:\\/\\/www\\.amazon\\..*\\/gp\\/bit\\/apps\\/web\\/SERP\\/search",
+      "xpath" : {
+        "block": [
+          "//div/div/div[ contains( concat( ' ', normalize-space(@class), ' ' ),concat( ' ', 'naturalResult', ' ' ) ) ]"
+        ],
+        "insert" : [
+          "./cite"
+        ],
+        "target" : [
+          "./cite/text()"
+        ]
+      }
+    }
+  },
+
+  "bing"   : {
+    "urlexp" : "http(?:s)?:\\/\\/www\\.bing\\.com\\/search?.*[?#&]q=([^&]+)",
+    "rankometer" :  {
+      "url"   : "http(?:s)?:\\/\\/.*((search\\.msn|live)\\.com\\/results.aspx\\?|(?:www\\.)?bing\\.com\\/search)",
+      "xpath" : {
+        "block": [
+          "descendant-or-self::*[@id = 'b_content']/descendant::ol[ contains( concat( ' ', normalize-space(@id), ' '), ' b_results ')]/descendant::li[ contains( concat( ' ', normalize-space(@class), ' '), ' b_algo ')]",
+          "descendant-or-self::*[@id = 'results']/descendant::ul[ contains( concat( ' ', normalize-space(@class), ' '), ' sb_results ')]/descendant::li/descendant::div[ contains( concat( ' ', normalize-space(@class), ' '), ' sa_cc ')]"
+        ],
+        "insert" : [
+          "./descendant::div[ contains( concat( ' ', normalize-space(@class), ' '), ' b_caption')]/div/descendant::cite",
+          "./descendant::div[ contains( concat( ' ', normalize-space(@class), ' '), ' sb_meta ')]/descendant::cite"
+        ],
+        "target" : [
+          "./descendant::h2/descendant::a/@href",
+          "./descendant::div[ contains( concat( ' ', normalize-space(@class), ' '), ' sb_tlst ')]/descendant::h3/descendant::a/@href"
+        ]
+      }
+    },
+    "cba" :  {
+      "url"   :"http(?:s)?:\\/\\/.*search\\.msn|live\\.com\\/results.aspx\\?|http:\\/\\/www\\.bing\\.com\\/search",
+      "xpath" : {
+        "block": [
+          "//div[ contains( concat( ' ', normalize-space(@class), ' ' ),concat( ' ', 'sb_adsWv2', ' ' ) ) ]/ul/li",
+          "//div[ contains( concat( ' ', normalize-space(@class), ' ' ),concat( ' ', 'sb_adsWv2', ' ' ) ) ]/ul/li",
+          "//li[ contains( concat( ' ', normalize-space(@class), ' ' ),concat( ' ', 'b_ad', ' ' ) ) ]/ul/li",
+          "//div[ contains( concat( ' ', normalize-space(@class), ' ' ),concat( ' ', 'sb_adsNv2', ' ' ) ) ]/ul/li"
+        ],
+        "insert" : [
+          "./div/p/cite",
+          "./div/cite",
+          "./div/div/div/cite",
+          "./div/cite"
+        ],
+        "target" : [
+          "./div/descendant::h3/descendant::a/@href",
+          "./div/descendant::h3/descendant::a/@href",
+          "./div/descendant::h2/descendant::a/@href",
+          "./div/descendant::h3/descendant::a/@href"
+        ]
+      }
+    }
+  },
+  "yahoo"  : {
+    "urlexp" : "http(?:s)?:\\/\\/.*search\\.yahoo\\.com\\/search.*[?#&]p=([^&]+)",
+    "rankometer" :  {
+      "url"   :"http(?:s)?:\\/\\/.*search\\.yahoo\\.com\\/search",
+      "xpath" : {
+        "block": [
+          "//div[@id='results']/descendant::ol/li/div[ contains( concat( ' ', normalize-space(@class), ' ' ),concat( ' ', 'res', ' ' ) ) ]"
+        ],
+        "insert" : [
+          "./span[ contains( concat( ' ', normalize-space(@class), ' '), ' url ')]"
+        ],
+        "target" : [
+          "./div/descendant::h3/descendant::a/@href"
+        ]
+      }
+    },
+    "cba" :  {
+      "url"   :"http(?:s)?:\\/\\/.*search\\.yahoo\\.com\\/search",
+      "xpath" : {
+        "block": [
+          "//div[ contains( concat( ' ', normalize-space(@class), ' ' ),concat( ' ', 'ads', ' ' ) ) ]/ul/li",
+          "//div[ contains( concat( ' ', normalize-space(@class), ' ' ),concat( ' ', 'ads', ' ' ) ) ]/ul/li",
+          "//div[ contains( concat( ' ', normalize-space(@class), ' ' ),concat( ' ', 'ads', ' ' ) ) ]/ul/li"
+        ],
+        "insert" : [
+          "./em",
+          "./div/div/div/em",
+          "./em"
+        ],
+        "target" : [
+          "./a/@href",
+          "./div/div/div/div/a/@href",
+          "./div/descendant::a/@href"
+        ]
+      }
+    }
+  },
+  "baidu"  : {
+    "urlexp" : "http:\\/\\/www\\.baidu\\.com\\/(s|baidu).*[?#&]wd=([^&]+)",
+    "rankometer" :  {
+      "url"   :"http:\\/\\/www\\.baidu\\.com\\/(s|baidu)\\?",
+      "xpath" : {
+        "block": [
+          "//table/tbody/tr/td[ contains( concat( ' ', normalize-space(@class), ' '), ' c-default ')]",
+          "//table/tbody/tr/td[ contains( concat( ' ', normalize-space(@class), ' '), ' f ')]",
+          "//table/tbody/tr/td[ contains( concat( ' ', normalize-space(@class), ' '), ' f ')]",
+          "//table/tbody/tr/td[ contains( concat( ' ', normalize-space(@class), ' '), ' f ')]"
+        ],
+        "insert" : [
+          "./div/span[ contains( concat( ' ', normalize-space(@class), ' '), ' g ')]",
+          "./div/span[ contains( concat( ' ', normalize-space(@class), ' '), ' g ')]",
+          "./font/font[ contains( concat( ' ', normalize-space(@color), ' '), ' #008000 ')]",
+          "./font/span[ contains( concat( ' ', normalize-space(@class), ' '), ' g ')]"
+        ],
+        "target" : [
+          "./descendant::h3/descendant::a/@href",
+          "./descendant::h3/descendant::a/@href",
+          "./descendant::h3/descendant::a/@href",
+          "./descendant::h3/descendant::a/@href"
+        ]
+      }
+    },
+    "cba" :  {
+      "url"   :"http:\\/\\/www\\.baidu\\.com\\/(s|baidu)\\?",
+      "xpath" : {
+        "block": [
+          "//div[ contains( concat( ' ', normalize-space(@id), ' ' ),concat( ' ', 'container', ' ' ) ) ]/table[ contains( concat( ' ', normalize-space(@class), ' ' ),concat( ' ', 'EC_mr15', ' ' ) ) ]",
+          "//div[ contains( concat( ' ', normalize-space(@id), ' ' ),concat( ' ', 'ec_im_container', ' ' ) ) ]/div[ contains( concat( ' ', normalize-space(@class), ' ' ),concat( ' ', 'EC_PP', ' ' ) ) ]"
+        ],
+        "insert" : [
+          "./tbody/tr/td/a/font[ contains( concat( ' ', normalize-space(@color), ' ' ),concat( ' ', '#008000', ' ' ) ) ]",
+          "./a/font[ contains( concat( ' ', normalize-space(@color), ' ' ),concat( ' ', '#008000', ' ' ) ) ]"
+        ],
+        "target" : [
+          "./tbody/tr/td[ contains( concat( ' ', normalize-space(@id), ' ' ),concat( ' ', 'taw0', ' ' ) ) ]/a/@href",
+          "./a/@href"
+        ]
+      }
+    }
+  },
+  "alexa"  : {
+    "urlexp" : "http:\\/\\/search\\.toolbars\\.alexa\\.com\\/.*[?#&]q=([^&]+)",
+    "rankometer" :  {
+      "url"   :"http:\\/\\/search\\.toolbars\\.alexa\\.com",
+      "reload": true,
+      "hide": true,
+      "xpath" : {
+        "block": [
+          "//body/div/div/div[ contains( concat( ' ', normalize-space(@id), ' '), ' content ')]/div/div/ol/li"
+        ],
+        "insert" : [
+          "./a[ contains( concat( ' ', normalize-space(@class), ' '), ' visible-url ')]"
+        ],
+        "target" : [
+          "./a[ contains( concat( ' ', normalize-space(@class), ' '), ' title ')]/@href"
+        ]
+      }
+    }
+  },
+  "ask"    : {
+    "rankometer" :  {
+      "url"   :"http:\\/\\/.*www\\.ask\\.com\\/web\\?",
+      "xpath" : {
+        "block": [
+          "descendant-or-self::*[@id = 'teoma-results']/descendant::div/descendant::div[ contains(concat(' ', normalize-space(@class), ' '), ' tsrc_tled ') ]"
+        ],
+        "insert" : [
+          "./div/div/span[ contains( concat( ' ', normalize-space(@class), ' '), ' attrib ')]"
+        ],
+        "target" : [
+          "./div/div/descendant::a/@href"
+        ]
+      }
+    },
+    "cba" :  {
+      "url"   :"http:\\/\\/.*www\\.ask\\.com\\/web\\?",
+      "xpath" : {
+        "block": [
+          "//div[ contains( concat( ' ', normalize-space(@class), ' ' ),concat( ' ', 'spl_ad_plus', ' ' ) ) ]"
+        ],
+        "insert" : [
+          "./div/a[ contains( concat( ' ', normalize-space(@class), ' ' ),concat( ' ', 'attrib', ' ' ) ) ]/span"
+        ],
+        "target" : [
+          "./div/a/@href"
+        ]
+      }
+    }
+  },
+  "yahoocn": {
+    "rankometer" :  {
+      "url"   :"http:\\/\\/((search|one)\\.cn\\.yahoo\\.com|www\\.yahoo\\.cn)\\/(search|s)\\?",
+      "xpath" : {
+        "block": [
+          "//div[ contains( concat( ' ', normalize-space(@class), ' '), ' yst-web ')]/ul/li"
+        ],
+        "insert" : [
+          "./em"
+        ],
+        "target" : [
+          "./descendant::h3/descendant::a/@href"
+        ]
+      }
+    }
+  },
+  "soso": {
+    "rankometer" :  {
+      "url"   :"http:\\/\\/www\\.soso\\.com\\/q\\?",
+      "xpath" : {
+        "block": [
+          "//div/div/div[ contains( concat( ' ', normalize-space(@class), ' '), 'result ')]/ol/li/div"
+        ],
+        "insert" : [
+          "./div[ contains( concat( ' ', normalize-space(@class), ' '), ' result_summary ')]/div[ contains( concat( ' ', normalize-space(@class), ' '), ' url ')]/cite"
+        ],
+        "target" : [
+          "./descendant::h3/descendant::a/@href"
+        ]
+      }
+    },
+    "cba" :  {
+      "url"   :"http:\\/\\/www\\.soso\\.com\\/q\\?",
+      "xpath" : {
+        "block": [
+          "//div[ contains( concat( ' ', normalize-space(@class), ' ' ),concat( ' ', 'ad_zdq', ' ' ) ) ]/ol/li",
+          "//div[ contains( concat( ' ', normalize-space(@id), ' ' ),concat( ' ', 'rads', ' ' ) ) ]/ul/li"
+        ],
+        "insert" : [
+          "./p/a/cite",
+          "./p/a/cite"
+        ],
+        "target" : [
+          "./descendant::h3/descendant::a/@href",
+          "./descendant::h3/descendant::a/@href"
+        ]
+      }
+    }
+  },
+  "sogou": {
+    "rankometer" :  {
+      "url"   :"http:\\/\\/www\\.sogou\\.com\\/web\\?",
+      "xpath" : {
+        "block": [
+          "//div/div/div/div[ contains( concat( ' ', normalize-space(@class), ' '), ' results ')]/div",
+          "//div/div/div/div[ contains( concat( ' ', normalize-space(@class), ' '), ' results ')]/div"
+        ],
+        "insert" : [
+          "./font[ contains( concat( ' ', normalize-space(@color), ' '), ' #008000 ')]",
+          "./div[ contains( concat( ' ', normalize-space(@class), ' '), ' fb ')]/cite"
+        ],
+        "target" : [
+          "./descendant::h3/descendant::a/@href",
+          "./descendant::h3/descendant::a/@href"
+        ]
+      }
+    },
+    "cba" :  {
+      "url"   :"http:\\/\\/www\\.sogou\\.com\\/web\\?",
+      "xpath" : {
+        "block": [
+          "//div[ contains( concat( ' ', normalize-space(@class), ' ' ),concat( ' ', 'sponsored', ' ' ) ) ]/ol/li",
+          "//div[ contains( concat( ' ', normalize-space(@class), ' ' ),concat( ' ', 'right', ' ' ) ) ]/div[ contains( concat( ' ', normalize-space(@class), ' ' ),concat( ' ', 'rb', ' ' ) ) ]"
+        ],
+        "insert" : [
+          "./cite",
+          "./div[ contains( concat( ' ', normalize-space(@class), ' ' ),concat( ' ', 'fb', ' ' ) ) ]/a/cite"
+        ],
+        "target" : [
+          "./descendant::h3/descendant::a/@href",
+          "./descendant::h3/descendant::a/@href"
+        ]
+      }
+    }
+  },
+  "youdao": {
+    "rankometer" :  {
+      "url"   :"http:\\/\\/www\\.youdao\\.com\\/search\\?",
+      "xpath" : {
+        "block": [
+          "//div/div/ol[ contains( concat( ' ', normalize-space(@id), ' '), ' results ')]/li"
+        ],
+        "insert" : [
+          "./div/div/div[ contains( concat( ' ', normalize-space(@class), ' '), ' result-footer ')]/cite"
+        ],
+        "target" : [
+          "./div/div[ contains( concat( ' ', normalize-space(@class), ' '), ' tl ')]/descendant::h3/descendant::a/@href"
+        ]
+      }
+    },
+    "cba" :  {
+      "url"   :"http:\\/\\/www\\.youdao\\.com\\/search\\?",
+      "xpath" : {
+        "block": [
+          "//div[ contains( concat( ' ', normalize-space(@id), ' ' ),concat( ' ', 'spTop', ' ' ) ) ]/ul/li",
+          "//div[ contains( concat( ' ', normalize-space(@id), ' ' ),concat( ' ', 'splink', ' ' ) ) ]/ul/li"
+        ],
+        "insert" : [
+          "./p/a/span",
+          "./p[ contains( concat( ' ', normalize-space(@class), ' ' ),concat( ' ', 'googleAdsDesc', ' ' ) ) ][3]/a"
+        ],
+        "target" : [
+          "./descendant::h3/descendant::a/@href",
+          "./descendant::h3/descendant::a/@href"
+        ]
+      }
+    }
+  }
+}
+
+
+
+–ùØ±¿      [3"[3&? Ýn[m¢   q    :https://s3.amazonaws.com/com.alexa.toolbar/alx/f/3.0.2/toolbar/search_conf.js?rand=1527984930717_780356890000596 necko:classified 1 strongly-framed 1 security-info FnhllAKWRHGAlo+ESXykKAAAAAAAAAAAwAAAAAAAAEaphjojH6pBabDSgSnsfLHeAAQAAgAAAAAAAAAAAAAAAAAAAAAB4vFIJp5wRkeyPxAQ9RJGKPqbqVvKO0mKuIl8ec8o/uhmCjImkVxP+7sgiYWmMt8FvcOXmlQiTNWFiWlrbpbqgwAAAAAAAALJMIICxTCCAa2gAwIBAgIIFRuxK0xB8JwwDQYJKoZIhvcNAQELBQAwbjELMAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFDASBgNVBAcTC0xvcyBBbmdlbGVzMRAwDgYDVQQKEwdHb1Byb3h5MRAwDgYDVQQDEwdHb1Byb3h5MRAwDgYDVQQqEwdHb1Byb3h5MB4XDTE4MDIxMjA1MDgxOFoXDTIxMDMxMzA1MDgxOFowUzELMAkGA1UEBhMCQ04xGDAWBgNVBAoTDyouYW1hem9uYXdzLmNvbTEQMA4GA1UECxMHR29Qcm94eTEYMBYGA1UEAxMPKi5hbWF6b25hd3MuY29tMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE3qnk9E+8lbEgUvwl3h6lZLKFKc5VAAIpcLWdSsIKaXUw6NFmiGGfUr80IaPKrTUMByQoXj9QCOVKiRjs+YwA5qNNMEswDgYDVR0PAQH/BAQDAgKkMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjAaBgNVHREEEzARgg8qLmFtYXpvbmF3cy5jb20wDQYJKoZIhvcNAQELBQADggEBABnekvh8XcDpA3C4CHae0E5HnKhLz0rnfNHLMpi9VlSCqTaRGkk5W/OOddARJFBcJjho5x9DK5aq8LAWpvwzxIk2zNKMaeDAFUCirjxg9+gLB6XZBQXVwsv4UfxcBFnq7yNNTYcHizVigtAkxCpwDi+WVkuBoqG36dMDl3e+/5ge1dK7xTR+sdRP4jtnrUe1gwsxWBJ5bv8PUsRRqgwSA7JDgV1GYN4GFD08Zt0rPUottb/NG8wvLnol8i0ITaK8sIoRW00Zd1b9aJ1fS/AshBe/D3M6gNLkJk8WFAEvN3N9YwF+z82Z0UjDvl8VR7RUbcrGB2RGxPDgx8ywgJYUSQPMqQEDAAAAAAEBAAAAAA== request-method GET response-head HTTP/1.1 200 OK
+Accept-Ranges: bytes
+Content-Length: 16649
+Content-Type: application/javascript
+Date: Sun, 03 Jun 2018 00:15:33 GMT
+Etag: "78de98c92bda62cbd44511533603920b"
+Last-Modified: Thu, 28 Apr 2016 23:25:07 GMT
+Server: AmazonS3
+X-Amz-Id-2: Otb+xoM8NkszdlDZl2TDUNgtxa7Iy7py0TS1TVY2pL3VygabPI6beUe5WGx+f8YiGBebe0mta5Q=
+X-Amz-Meta-Alexa-Last-Modified: 20160428232505
+X-Amz-Request-Id: 34C6453F04AC73E7
+X-Amz-Version-Id: KI57_K4Xsdh8psQ_9F8.p6iHAJ5F6DJk
+ original-response-headers Accept-Ranges: bytes
+Content-Length: 16649
+Content-Type: application/javascript
+Date: Sun, 03 Jun 2018 00:15:33 GMT
+Etag: "78de98c92bda62cbd44511533603920b"
+Last-Modified: Thu, 28 Apr 2016 23:25:07 GMT
+Server: AmazonS3
+X-Amz-Id-2: Otb+xoM8NkszdlDZl2TDUNgtxa7Iy7py0TS1TVY2pL3VygabPI6beUe5WGx+f8YiGBebe0mta5Q=
+X-Amz-Meta-Alexa-Last-Modified: 20160428232505
+X-Amz-Request-Id: 34C6453F04AC73E7
+X-Amz-Version-Id: KI57_K4Xsdh8psQ_9F8.p6iHAJ5F6DJk
+ uncompressed-len 0   A	

@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<RDF:RDF xmlns:NC="http://home.netscape.com/NC-rdf#"
+         xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <RDF:Description RDF:about="rdf://tabmix/closed2/window/3UJ5UrGS/tabs/panel-3-1"
+                   NC:image="https://www.bannedbook.org/favicon.ico"
+                   NC:properties="0011111 hidden=false"
+                   NC:historyData="%5B%7B%22url%22:%22https://www.bannedbook.org/bnews/fq/?utm_source=ff-mypac?utm_source=ff-mypac%22,%22title%22:%22%E6%89%8B%E6%9C%BA%E7%BF%BB%E5%A2%99%7C%E5%AE%89%E5%8D%93%E7%BF%BB%E5%A2%99-%E6%89%8B%E6%9C%BA%E7%A6%81%E7%BD%91%E5%B9%B3%E5%8F%B0%22,%22scroll%22:%22%7B%5C%22scroll%5C%22:%5C%220,2489%5C%22%7D%22,%22triggeringPrincipal_base64%22:%22SmIS26zLEdO3ZQBgsLbOywAAAAAAAAAAwAAAAAAAAEY=%22%7D%5D"
+                   NC:scroll="{&quot;scroll&quot;:&quot;0,2489&quot;}">
+    <NC:index NC:parseType="Integer">0</NC:index>
+    <NC:tabPos NC:parseType="Integer">0</NC:tabPos>
+  </RDF:Description>
+  <RDF:Description RDF:about="rdf://tabmix/closed1/window/dG0qB7wf"
+                   NC:status="backup"
+                   NC:SSi="window0">
+    <NC:tabs RDF:resource="rdf://tabmix/closed1/window/dG0qB7wf/tabs"/>
+    <NC:closedtabs RDF:resource="rdf://tabmix/closed1/window/dG0qB7wf/closedtabs"/>
+    <NC:selectedIndex NC:parseType="Integer">0</NC:selectedIndex>
+  </RDF:Description>
+  <RDF:Description RDF:about="rdf://tabmix/closed1/window/dG0qB7wf/tabs/panel-7-3"
+                   NC:image="chrome://mozapps/skin/extensions/extensionGeneric-16.png"
+                   NC:properties="0011111 hidden=false"
+                   NC:historyData="%5B%7B%22url%22:%22about:addons%22,%22title%22:%22%E9%99%84%E5%8A%A0%E7%BB%84%E4%BB%B6%E7%AE%A1%E7%90%86%E5%99%A8%22,%22scroll%22:%220,0%22,%22triggeringPrincipal_base64%22:%22SmIS26zLEdO3ZQBgsLbOywAAAAAAAAAAwAAAAAAAAEY=%22%7D%5D"
+                   NC:scroll="0,0">
+    <NC:index NC:parseType="Integer">0</NC:index>
+    <NC:tabPos NC:parseType="Integer">0</NC:tabPos>
+  </RDF:Description>
+  <RDF:Seq RDF:about="rdf://tabmix/closed2/window/3UJ5UrGS/tabs">
+    <RDF:li RDF:resource="rdf://tabmix/closed2/window/3UJ5UrGS/tabs/panel-3-1"/>
+  </RDF:Seq>
+  <RDF:Seq RDF:about="rdf://tabmix/closed1/window">
+    <RDF:li RDF:resource="rdf://tabmix/closed1/window/dG0qB7wf"/>
+  </RDF:Seq>
+  <RDF:Description RDF:about="rdf://tabmix/closed1/window"
+                   NC:nameExt=", (1 页) (2017/08/17 21:08:08)" />
+  <RDF:Seq RDF:about="rdf://tabmix/closed0/window/AePOPi6k/tabs">
+    <RDF:li RDF:resource="rdf://tabmix/closed0/window/AePOPi6k/tabs/panel-3-1"/>
+  </RDF:Seq>
+  <RDF:Seq RDF:about="rdf://tabmix/closed0/window">
+    <RDF:li RDF:resource="rdf://tabmix/closed0/window/AePOPi6k"/>
+  </RDF:Seq>
+  <RDF:Description RDF:about="rdf://tabmix/closed0/window"
+                   NC:nameExt=", (1 页) (2017/08/17 21:05:11)" />
+  <RDF:Seq RDF:about="rdf://tabmix/closed2/window">
+    <RDF:li RDF:resource="rdf://tabmix/closed2/window/3UJ5UrGS"/>
+  </RDF:Seq>
+  <RDF:Description RDF:about="rdf://tabmix/closed2/window"
+                   NC:nameExt=", (1 页) (2017/08/17 21:06:38)" />
+  <RDF:Description RDF:about="rdf://tabmix/closedSession/crashedsession">
+    <NC:session RDF:resource="rdf://tabmix/closed3/window"/>
+  </RDF:Description>
+  <RDF:Description RDF:about="rdf://tabmix/closed0/window/AePOPi6k/tabs/panel-3-1"
+                   NC:image="https://www.bannedbook.org/favicon.ico"
+                   NC:properties="0011111 hidden=false"
+                   NC:historyData="%5B%7B%22url%22:%22https://www.bannedbook.org/bnews/fq/?utm_source=ff-mypac?utm_source=ff-mypac%22,%22title%22:%22%E6%89%8B%E6%9C%BA%E7%BF%BB%E5%A2%99%7C%E5%AE%89%E5%8D%93%E7%BF%BB%E5%A2%99-%E6%89%8B%E6%9C%BA%E7%A6%81%E7%BD%91%E5%B9%B3%E5%8F%B0%22,%22scroll%22:%220,0%22,%22triggeringPrincipal_base64%22:%22SmIS26zLEdO3ZQBgsLbOywAAAAAAAAAAwAAAAAAAAEY=%22%7D%5D"
+                   NC:scroll="0,0">
+    <NC:index NC:parseType="Integer">0</NC:index>
+    <NC:tabPos NC:parseType="Integer">0</NC:tabPos>
+  </RDF:Description>
+  <RDF:Seq RDF:about="rdf://tabmix/closed0/window/AePOPi6k/closedtabs">
+  </RDF:Seq>
+  <RDF:Description RDF:about="rdf://tabmix/closedSession/previoustolastSession">
+    <NC:session RDF:resource="rdf://tabmix/closed0/window"/>
+  </RDF:Description>
+  <RDF:Description RDF:about="rdf:backupSessionWithGroups"
+                   NC:status="saved" />
+  <RDF:Description RDF:about="rdf://tabmix/closedSession/lastSession">
+    <NC:session RDF:resource="rdf://tabmix/closed2/window"/>
+  </RDF:Description>
+  <RDF:Seq RDF:about="rdf://tabmix/closed2/window/3UJ5UrGS/closedtabs">
+  </RDF:Seq>
+  <RDF:Description RDF:about="rdf://tabmix/closedSession/thisSession"
+                   NC:status="stopped">
+    <NC:session RDF:resource="rdf://tabmix/closed1/window"/>
+  </RDF:Description>
+  <RDF:Seq RDF:about="rdf://tabmix/closed1/window/dG0qB7wf/tabs">
+    <RDF:li RDF:resource="rdf://tabmix/closed1/window/dG0qB7wf/tabs/panel-7-3"/>
+  </RDF:Seq>
+  <RDF:Description RDF:about="rdf://tabmix/closed2/window/3UJ5UrGS"
+                   NC:status="backup"
+                   NC:SSi="window0"
+                   NC:name="%E6%89%8B%E6%9C%BA%E7%BF%BB%E5%A2%99%7C%E5%AE%89%E5%8D%93%E7%BF%BB%E5%A2%99-%E6%89%8B%E6%9C%BA%E7%A6%81%E7%BD%91%E5%B9%B3%E5%8F%B0"
+                   NC:nameExt=", (1 页) (2017/08/17 21:06:38)"
+                   NC:timestamp="1502967998385">
+    <NC:tabs RDF:resource="rdf://tabmix/closed2/window/3UJ5UrGS/tabs"/>
+    <NC:closedtabs RDF:resource="rdf://tabmix/closed2/window/3UJ5UrGS/closedtabs"/>
+    <NC:selectedIndex NC:parseType="Integer">0</NC:selectedIndex>
+  </RDF:Description>
+  <RDF:Seq RDF:about="rdf://tabmix/closedSession/">
+    <RDF:li RDF:resource="rdf://tabmix/closedSession/thisSession"/>
+    <RDF:li RDF:resource="rdf://tabmix/closedSession/lastSession"/>
+    <RDF:li RDF:resource="rdf://tabmix/closedSession/previoustolastSession"/>
+    <RDF:li RDF:resource="rdf://tabmix/closedSession/crashedsession"/>
+  </RDF:Seq>
+  <RDF:Description RDF:about="rdf://tabmix/closed0/window/AePOPi6k"
+                   NC:status="backup"
+                   NC:SSi="window0"
+                   NC:name="%E6%89%8B%E6%9C%BA%E7%BF%BB%E5%A2%99%7C%E5%AE%89%E5%8D%93%E7%BF%BB%E5%A2%99-%E6%89%8B%E6%9C%BA%E7%A6%81%E7%BD%91%E5%B9%B3%E5%8F%B0"
+                   NC:nameExt=", (1 页) (2017/08/17 21:05:11)"
+                   NC:timestamp="1502967911826">
+    <NC:tabs RDF:resource="rdf://tabmix/closed0/window/AePOPi6k/tabs"/>
+    <NC:closedtabs RDF:resource="rdf://tabmix/closed0/window/AePOPi6k/closedtabs"/>
+    <NC:selectedIndex NC:parseType="Integer">0</NC:selectedIndex>
+  </RDF:Description>
+</RDF:RDF>

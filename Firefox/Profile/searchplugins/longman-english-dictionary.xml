@@ -1,0 +1,9 @@
+<SearchPlugin xmlns="http://www.mozilla.org/2006/browser/search/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/">
+<os:ShortName>Longman English Dictionary</os:ShortName>
+<os:InputEncoding>ISO-8859-1</os:InputEncoding>
+<os:Image width="16" height="16">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACpElEQVQ4jXXT20vTcRjH8f0lQZ63Nn9OTPkZsQ5QYkJp5iamqOVmWvMwZmWOLHPOZKuB5nKiKFEeSCIvJNGOczgl9LLuUohhRAOdc7rDuwspM/Xiufo+z4svH55HIpFIJFrdOP9WWupdklNyOKfOIVuj5HzxWVLSbvB/n2S/4ZIrL0iQ6qlpeMKHeTcfF14x+OoZSlG7B9DqxtkfkFVis79hxvOVBw+buayrpKVtjE7rl4MBRWoVgmAkU2UgPl7D1Qo7viD4gpBbWM3xUxXEJlWQLnTsD8QeKWbKBXb7ey4UmCkt7yEUjBAKRhgY8mC2jTEzu4qoMqNIb9wLZKoMuD2wHoD+/gWqq0YoLe2jtm6URGkBA0MeAqEoUy5IkF/dC8jkdTSaXNy3zJKvtuH2wPIKzM+FKbpsQVfTg8k0yoWL7ahOmnYDh+P0qC895ZM7Spv1M/lqG12O9wRCUXxB+LkeQV/vYHLaS9/gHIlCGYpkww4gZDShSNPi3wqzHoC+wTlutjwiFNnCF44AUHunkx+h7VCdI3MkSPU7gKgyk53bzPLKdsPEuyU6+1+yEtjAH91kFcgrq8cXhFW235OVtTuATF7HmTwzmhIbRcVd5Ktt3DY9o+xaG0XlRu5ZesnOq+H6rV7E09WcyTMjZDTt/oG60E63c5Fu5yIOp4tW6yQOpwur4zXWrmHMtjFarZM8H/lGg2kKQTDuAEnyKloef2R5BbxrsPQdNiLg3wrjj27i3wqzGQqyEYE305B+zLI7A+GYATHLyCFpPkpRi3hCT4tlislpLxsR8AajeNe28ykpHSU+rungW9DqxskUm5FJ75ApNiNmGRkY8jDx9hduD2g0w8TE/LOJ+13kn4qJaUSRWoVS1CI7aiBBqidR3oEyvf3v8G+9YpgR8SCNNQAAAABJRU5ErkJggg==</os:Image>
+<SearchForm>http://www.ldoceonline.com</SearchForm>
+<os:Url type="text/html" method="GET" template="http://www.ldoceonline.com/search/" resultDomain="ldoceonline.com">
+  <os:Param name="q" value="{searchTerms}"/>
+</os:Url>
+</SearchPlugin>

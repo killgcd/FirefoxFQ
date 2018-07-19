@@ -1,0 +1,43 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+#defaultfullzoomlevel-fullzoombtn,
+toolbar[iconsize="small"] #defaultfullzoomlevel-fullzoombtn
+{
+  list-style-image: url("chrome://defaultfullzoomlevel/skin/fullZoomBtn.png");
+}
+
+#defaultfullzoomlevel-fullzoombtn[on="true"] ,
+toolbar[iconsize="small"] #defaultfullzoomlevel-fullzoombtn[on="true"]
+{
+  border-color: ThreeDShadow ThreeDHighlight ThreeDHighlight ThreeDShadow;
+}
+
+#defaultfullzoomlevel-textzoombtn,
+toolbar[iconsize="small"] #defaultfullzoomlevel-textzoombtn
+{
+  list-style-image: url("chrome://defaultfullzoomlevel/skin/textZoomBtn.png");
+}
+
+#defaultfullzoomlevel-textzoombtn[on="true"],
+toolbar[iconsize="small"] #defaultfullzoomlevel-textzoombtn[on="true"] {
+  border-color: ThreeDShadow ThreeDHighlight ThreeDHighlight ThreeDShadow;
+}
+
+
+
+#defaultfullzoomlevel-fullzoombtn2,
+toolbar[iconsize="small"] #defaultfullzoomlevel-fullzoombtn2
+{
+  list-style-image: url("chrome://defaultfullzoomlevel/skin/fullZoomBtn.png");
+}
+
+#defaultfullzoomlevel-textzoombtn2,
+toolbar[iconsize="small"] #defaultfullzoomlevel-textzoombtn2
+{
+  list-style-image: url("chrome://defaultfullzoomlevel/skin/textZoomBtn.png");
+}
+
+#statusbarZoomLevel:not([overflowedItem=true])
+{
+	padding-left: 0px;
+	padding-right: 0px;
+}

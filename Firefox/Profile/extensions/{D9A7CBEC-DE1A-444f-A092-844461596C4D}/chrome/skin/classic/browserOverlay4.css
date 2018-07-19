@@ -1,0 +1,57 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+#defaultfullzoomlevel-fullzoombtn,
+toolbar[iconsize="small"] #defaultfullzoomlevel-fullzoombtn
+{
+  list-style-image: url("chrome://defaultfullzoomlevel/skin/fullZoomBtn.png");
+}
+
+#defaultfullzoomlevel-fullzoombtn[on="true"] ,
+toolbar[iconsize="small"] #defaultfullzoomlevel-fullzoombtn[on="true"]
+{
+  border-color: ThreeDShadow ThreeDHighlight ThreeDHighlight ThreeDShadow;
+}
+
+#defaultfullzoomlevel-textzoombtn,
+toolbar[iconsize="small"] #textzoombtn
+{
+  list-style-image: url("chrome://defaultfullzoomlevel/skin/textZoomBtn.png");
+}
+
+#textzoombtn[on="true"],
+toolbar[iconsize="small"] #textzoombtn[on="true"] {
+  border-color: ThreeDShadow ThreeDHighlight ThreeDHighlight ThreeDShadow;
+}
+
+
+
+#defaultfullzoomlevel-fullzoombtn2,
+toolbar[iconsize="small"] #defaultfullzoomlevel-fullzoombtn2
+{
+  list-style-image: url("chrome://defaultfullzoomlevel/skin/fullZoomBtn.png");
+}
+
+#defaultfullzoomlevel-textzoombtn2,
+toolbar[iconsize="small"] #textzoombtn2
+{
+  list-style-image: url("chrome://defaultfullzoomlevel/skin/textZoomBtn.png");
+}
+
+
+#statusbarZoomLevel {
+  list-style-image: url("chrome://defaultfullzoomlevel/skin/icon16.png");
+}
+toolbar[iconsize="large"] #statusbarZoomLevel {
+  list-style-image: url("chrome://defaultfullzoomlevel/skin/icon24.png");
+}
+
+toolbar[mode="full"] #statusbarZoomLevel {
+  list-style-image: url("chrome://defaultfullzoomlevel/skin/icon16.png") !important;
+}
+toolbar[iconsize="large"][mode="full"] #statusbarZoomLevel {
+  list-style-image: url("chrome://defaultfullzoomlevel/skin/icon24.png") !important;
+}
+
+toolbar[mode="icons"] #statusbarZoomLevel .toolbarbutton-icon{
+  width: auto !important;
+  max-width: none !important;
+}

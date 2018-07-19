@@ -1,0 +1,5 @@
+library=
+name=NSS Internal PKCS #11 Module
+parameters=configdir='sql:D:\\fanqiang\\FIREFO~1\\Firefox\\Profile' certPrefix='' keyPrefix='' secmod='secmod.db' flags=optimizeSpace updatedir='' updateCertPrefix='' updateKeyPrefix='' updateid='' updateTokenDescription=''  manufacturerID='Mozilla.org' libraryDescription='PSM 内部加密服务' cryptoTokenDescription='普通加密服务' dbTokenDescription='软件型安全设备' cryptoSlotDescription='PSM 内部加密服务' dbSlotDescription='PSM 私钥' FIPSSlotDescription='FIPS 140 密码，密钥和证书服务' FIPSTokenDescription='软件型安全设备(FIPS)' minPS=0
+NSS=trustOrder=75 cipherOrder=100 slotParams={0x00000001=[slotFlags=RSA,RC4,RC2,DES,DH,SHA1,MD5,MD2,SSL,TLS,AES,SHA256,SHA512,Camellia,SEED,RANDOM askpw=any timeout=30 ] }  Flags=internal,critical
+

@@ -1,0 +1,10 @@
+<SearchPlugin xmlns="http://www.mozilla.org/2006/browser/search/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/">
+<os:ShortName>Dictionary.com</os:ShortName>
+<os:InputEncoding>UTF-8</os:InputEncoding>
+<os:Image width="16" height="16">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABCklEQVQ4jbWSLa7EIBSFK0d2C10GtkvoNpBItoBkC3cJSCyyciQWiaz8nphA/2aSlzd5TW6alPS75xzOMGnPNzNM2vP443wNePybgtkFJGVGI/1bzJnFh7uCmDOlbsxuP1RWACh1YzoAgBN0NMKgrPAstf+grPTDUjcAZhcYzQsqKXf5iw+7hUl7St36NJCk12YtidmFvqi9bxksPnSIpIyygosrQFcqKTO7sIeorJy8HUEALq49g2OQHXCU5OLaPV9Bzf+tB8oKWhIuridYA2pJAFztfuzBaN4D3zbxN41rCq45jUbOCq5X2ba351i2E6CR25VpSWhJLD6grKCsEHPmWSqjkT6T9vwA0HGLDXomR9EAAAAASUVORK5CYII=</os:Image>
+<SearchForm>http://dictionary.reference.com</SearchForm>
+<os:Url type="text/html" method="GET" template="http://dictionary.reference.com/dic" resultDomain="dictionary.reference.com">
+  <os:Param name="q" value="{searchTerms}"/>
+  <os:Param name="search" value="search"/>
+</os:Url>
+</SearchPlugin>

@@ -1,0 +1,38 @@
+<!ENTITY pref.title "オプション">
+<!ENTITY config.tab.general "Default FullZoom Level オプション">
+
+<!ENTITY pref.DefaultFullZoomLevel.caption "既定値">
+<!ENTITY pref.DefaultFullZoomLevel.label "既定のページズームレベル (パーセント)">
+<!ENTITY pref.DefaultFullZoomLevel.accesskey "D">
+<!ENTITY pref.DefaultFullZoomMode.label "既定のモードは, ">
+<!ENTITY pref.DefaultFullZoomMode.accesskey "o">
+
+<!ENTITY pref.DefaultFullZoomSiteSpecific.label "ドメイン毎にズームレベルを記憶する">
+<!ENTITY pref.DefaultFullZoomSiteSpecific.accesskey "R">
+<!ENTITY pref.DefaultFullZoomLocalFolderSpecific.label "ローカルファイル毎にズームレベルを記憶する">
+<!ENTITY pref.DefaultFullZoomLocalFolderSpecific.accesskey "L">
+
+<!ENTITY pref.DefaultFullZoomLevel.label2 "拡大縮小率(例 0.9,1.0,1.25,1.5)">
+<!ENTITY pref.DefaultFullZoomLevel.accesskey2 "e">
+
+<!ENTITY pref.DefaultFullZoomLevelIgnoreImageDocument.label "画像のみの場合は拡大縮小しない">
+<!ENTITY pref.DefaultFullZoomLevelIgnoreImageDocument.accesskey "I">
+
+<!ENTITY pref.DefaultFullZoomLevelShowinstatusbar.label "ズームレベルをステータスバーに表示">
+<!ENTITY pref.DefaultFullZoomLevelShowinstatusbar.accesskey "S">
+
+<!ENTITY fullZoomBtn.label "ページ拡大縮小">
+<!ENTITY textZoomBtn.label "文字サイズ拡大縮小">
+
+<!ENTITY pref.DefaultFullZoomLevelShowinstatusbar.tooltip "ズームレベル(L:ポップアップ M:リセット R:モード)">
+
+<!ENTITY textZoomInKey ".">
+<!ENTITY textZoomResetKey "?">
+<!ENTITY textZoomOutKey ",">
+<!ENTITY textZoomInModifireKey "accel">
+<!ENTITY textZoomResetModifireKey "accel,shift">
+<!ENTITY textZoomOutModifireKey "accel">
+
+<!ENTITY pref.DefaultFullZoomReset.label "ドメイン毎のズームレベルを初期化する">
+<!ENTITY pref.DefaultFullZoomResetButton.label "初期化">
+<!ENTITY pref.DefaultFullZoomReset.accesskey "F">

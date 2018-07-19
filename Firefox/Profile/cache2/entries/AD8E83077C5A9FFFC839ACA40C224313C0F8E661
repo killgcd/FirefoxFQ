@@ -1,0 +1,267 @@
+var Alexa = null;
+
+var UNDEFINED = "undefined";
+
+if (/Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+    Alexa = window.Alexa ? window.Alexa : {
+        'browser':
+      {
+          'registerButtons': function(toolbar_id, url) {
+              var element = document.createElement("AlexaDataElement");
+              element.setAttribute("function", "register_buttons");
+              element.setAttribute("url", url);
+              document.documentElement.appendChild(element);
+
+              var evt = document.createEvent("Events");
+              evt.initEvent(toolbar_id + "_NS_PH_EVENT", true, false);
+              element.dispatchEvent(evt);
+              document.documentElement.removeChild(element);
+          },
+          'arguments': function() {
+              if (window.arguments && window.arguments.length > 1) {
+                  return window.arguments[1];
+              }
+              else {
+                  return null;
+              }
+          },
+          'navigate': function(url, openIn, features, arguments) {
+              if (window.arguments && window.arguments[0]) {
+                  window.arguments[0].navigate(url, openIn, features, arguments);
+              }
+              else {
+                  window.location = url;
+              }
+          }
+      }
+    };
+} else if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)) {
+    Alexa = {
+        'browser': {
+            _siteInfo: null,
+
+            'arguments': function() {
+                return typeof (window.external.arguments) != UNDEFINED ? window.external.arguments : null;
+            },
+
+            'getSiteInfo': function() {
+                return this._siteInfo;
+            },
+            'getSelectedText': function() {
+                return window.external.selectedText;
+            },
+            'navigate': function(url, openIn, windowFeatures, arguments) {
+                return window.external.navigate(url, openIn, windowFeatures, arguments);
+            },
+            'registerButtons': function(partnerId, url) {
+                var registerUrl = "alexa://installbutton?partnerId=" + partnerId + "&button=" + url;
+                if (typeof (window.external) != UNDEFINED) {
+                    window.external.navigate(registerUrl, "currentTab", null, null);
+                } else {
+                    window.location = registerUrl;
+                }
+            },
+            'configure': function(features) {
+                for (var key in features) {
+                    window.external.configure(key, features[key]);
+                }
+            },
+            '_onSiteInformationAvailable': function(siteInfo) {
+                this._siteInfo = siteInfo;
+            }
+        },
+
+        'button': {
+            'menu': {
+                'addCallbackItem': function(label, callback, arguments, icon) {
+                    window.external.addCallbackMenuItem(label, callback, arguments, icon);
+                },
+                'addSeparator': function() {
+                    window.external.addMenuSeparator();
+                },
+                'addUrlItem': function(label, url, openIn, windowFeatures, icon) {
+                    window.external.addURLMenuItem(label, url, openIn, windowFeatures, icon);
+                },
+                'clear': function() {
+                    window.external.clearMenu();
+                },
+                'create': function() {
+                    window.external.hasMenu = true;
+                }
+            },
+
+            'properties': {},
+
+            'update': function() {
+                if (typeof (this.properties.image) != UNDEFINED) {
+                    window.external.image = this.properties.image;
+                }
+                if (typeof (this.properties.openIn) != UNDEFINED) {
+                    window.external.openIn = this.properties.openIn;
+                }
+                if (typeof (this.properties.text) != UNDEFINED) {
+                    window.external.title = this.properties.text;
+                }
+                if (typeof (this.properties.tooltip) != UNDEFINED) {
+                    window.external.tooltip = this.properties.tooltip;
+                }
+                if (typeof (this.properties.windowFeatures) != UNDEFINED) {
+                    window.external.windowFeatures = this.properties.windowFeatures;
+                }
+                if (typeof (this.properties.url) != UNDEFINED) {
+                    window.external.url = this.properties.url;
+                }
+            }
+        },
+
+        'storage': {
+            'saveClientState': function(key, value) {
+                window.external.system.saveClientState(key, value);
+            },
+            'readClientState': function(key) {
+                return window.external.system.readClientState(key);
+            }
+        },
+
+        'tools': {
+            'XMLHttpRequest': function(request) {
+                var alexaXMLHTTP = window.external.alexaXMLHTTP;
+                alexaXMLHTTP.open(request.method, request.url, true, "", "");
+                if (typeof (request.headers) != UNDEFINED) {
+                    for (var header in request.headers) {
+                        alexaXMLHTTP.setRequestHeader(header, request.headers[header]);
+                    }
+                }
+                alexaXMLHTTP.onreadystatechange = function() {
+                    var responseDetails = {
+                        'status': null,
+                        'statusText:': null,
+                        'responseHeaders': null,
+                        'responseText': null,
+                        'readyState': alexaXMLHTTP.readyState
+                    };
+                    if (alexaXMLHTTP.readyState >= 4) {
+                        responseDetails.status = alexaXMLHTTP.status;
+                        responseDetails.statusText = alexaXMLHTTP.statusText;
+                        responseDetails.responseHeaders = alexaXMLHTTP.getAllResponseHeaders();
+                        responseDetails.responseText = alexaXMLHTTP.responseText;
+                    }
+                    if (typeof (request.onreadystatechange) != UNDEFINED) {
+                        request.onreadystatechange(responseDetails);
+                    }
+                    if (alexaXMLHTTP.readyState >= 4) {
+                        if (alexaXMLHTTP.status >= 200 && alexaXMLHTTP.status < 400) {
+                            if (typeof (request.onload) != UNDEFINED) {
+                                request.onload(responseDetails);
+                            }
+                        } else {
+                            if (typeof (request.onerror) != UNDEFINED) {
+                                request.onerror(responseDetails);
+                            }
+                        }
+                    }
+                }
+                alexaXMLHTTP.send(request.data);
+            },
+            'DOMParser': function() {
+                return {
+                    'parseFromString': function(text, mimeType) {
+                        var xmlDOM = new ActiveXObject("Microsoft.XMLDOM");
+                        xmlDOM.async = "false";
+                        xmlDOM.loadXML(text);
+                        return xmlDOM;
+                    }
+                }
+            },
+            'getNodeText': function(node) {
+                return node.text;
+            }
+        },
+
+        'events': {
+            _siteInfoListeners: [],
+            _leftClickListeners: [],
+            _popupShowingListeners: [],
+            _popupHidingListeners: [],
+
+            'addPageTurnListener': function(obj) {
+                this._siteInfoListeners.push(obj);
+            },
+
+            'addLeftClickListener': function(obj) {
+                this._leftClickListeners.push(obj);
+            },
+
+            'addPopupShowingListener': function(obj) {
+                this._popupShowingListeners.push(obj);
+            },
+
+            'addPopupHidingListener': function(obj) {
+                this._popupHidingListeners.push(obj);
+            },
+
+            '_onLeftClick': function(ev) {
+                for (i = 0; i < this._leftClickListeners.length; i++) {
+                    this._leftClickListeners[i](ev);
+                }
+            },
+
+            '_onSiteInformationAvailable': function(siteInfo) {
+                for (i = 0; i < this._siteInfoListeners.length; i++) {
+                    this._siteInfoListeners[i](siteInfo);
+                }
+            },
+
+            '_onPopupShowing': function(ev) {
+                for (i = 0; i < this._popupShowingListeners.length; i++) {
+                    this._popupShowingListeners[i](ev);
+                }
+            },
+            '_onPopupHiding': function(ev) {
+                for (i = 0; i < this._popupHidingListeners.length; i++) {
+                    this._popupHidingListeners[i](ev);
+                }
+            }
+        },
+        '_onLeftClick': function(ev) {
+            Alexa.events._onLeftClick(ev);
+        },
+        '_onSiteInformationAvailable': function(siteInfo) {
+            Alexa.browser._onSiteInformationAvailable(siteInfo);
+            Alexa.events._onSiteInformationAvailable(siteInfo);
+            Alexa.button.update();
+        },
+        '_onPopupShowing': function(ev) {
+            Alexa.events._onPopupShowing(ev);
+        },
+        '_onPopupHiding': function(ev) {
+            Alexa.events._onPopupHiding(ev);
+        }
+    };
+}
+
+
+i ªß¯      [:‰[:? â[u	   :    :https://s3.amazonaws.com/com.alexa.toolbar/buttons/api.js necko:classified 1 strongly-framed 1 security-info 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 request-method GET response-head HTTP/1.1 200 OK
+x-amz-id-2: ru5BK5fmBjBCn9WQkjGE5WraTCY0gtxvFUR79G3MpTVSNtv9uP+7wHXd6OOKKIM+6xuPYnrxMxE=
+x-amz-request-id: 16CC640ABD69C273
+Date: Sun, 03 Jun 2018 00:47:07 GMT
+Last-Modified: Tue, 08 Dec 2009 18:38:11 GMT
+ETag: "78ac736342b26567bf0a637689415ac5"
+x-amz-meta-alexa-last-modified: 20091207133345
+x-amz-version-id: null
+Accept-Ranges: bytes
+Content-Type: application/x-javascript
+Content-Length: 9417
+Server: AmazonS3
+ original-response-headers x-amz-id-2: ru5BK5fmBjBCn9WQkjGE5WraTCY0gtxvFUR79G3MpTVSNtv9uP+7wHXd6OOKKIM+6xuPYnrxMxE=
+x-amz-request-id: 16CC640ABD69C273
+Date: Sun, 03 Jun 2018 00:47:07 GMT
+Last-Modified: Tue, 08 Dec 2009 18:38:11 GMT
+ETag: "78ac736342b26567bf0a637689415ac5"
+x-amz-meta-alexa-last-modified: 20091207133345
+x-amz-version-id: null
+Accept-Ranges: bytes
+Content-Type: application/x-javascript
+Content-Length: 9417
+Server: AmazonS3
+ uncompressed-len 0 net-response-time-onstart 2192 net-response-time-onstop 2193   $É

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<RDF:RDF xmlns:NC="http://home.netscape.com/NC-rdf#"
+         xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <RDF:Description RDF:about="rdf://tabmix/closedSession/crashedsession">
+    <NC:session RDF:resource="rdf://tabmix/closed3/window"/>
+  </RDF:Description>
+  <RDF:Description RDF:about="rdf://tabmix/closedSession/lastSession">
+    <NC:session RDF:resource="rdf://tabmix/closed1/window"/>
+  </RDF:Description>
+  <RDF:Seq RDF:about="rdf://tabmix/closedSession/">
+    <RDF:li RDF:resource="rdf://tabmix/closedSession/thisSession"/>
+    <RDF:li RDF:resource="rdf://tabmix/closedSession/lastSession"/>
+    <RDF:li RDF:resource="rdf://tabmix/closedSession/previoustolastSession"/>
+    <RDF:li RDF:resource="rdf://tabmix/closedSession/crashedsession"/>
+  </RDF:Seq>
+  <RDF:Description RDF:about="rdf://tabmix/closedSession/previoustolastSession">
+    <NC:session RDF:resource="rdf://tabmix/closed2/window"/>
+  </RDF:Description>
+  <RDF:Description RDF:about="rdf://tabmix/closedSession/thisSession"
+                   NC:status="stopped">
+    <NC:session RDF:resource="rdf://tabmix/closed0/window"/>
+  </RDF:Description>
+</RDF:RDF>

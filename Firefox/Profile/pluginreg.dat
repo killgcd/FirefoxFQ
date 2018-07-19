@@ -1,0 +1,26 @@
+Generated File. Do not edit.
+
+[HEADER]
+Version|0.18t|$
+Arch|x86-msvc|$
+
+[PLUGINS]
+NPSWF32_29_0_0_171.dll|$
+C:\Windows\SysWOW64\Macromed\Flash\NPSWF32_29_0_0_171.dll|$
+29.0.0.171|$
+1525828178567|0|0|0|$
+Shockwave Flash 29.0 r0|$
+Shockwave Flash|$
+2
+0|application/x-shockwave-flash|Adobe Flash movie|swf|$
+1|application/futuresplash|FutureSplash movie|spl|$
+
+[INVALID]
+C:\Program Files (x86)\Common Files\Adobe\OOBE\PDApp\CCM\Utilities\npAdobeAAMDetect32.dll|$
+1438860604000|$
+C:\Program Files (x86)\Common Files\Adobe\OOBE\PDApp\CCM\Utilities\npAdobeAAMDetect64.dll|$
+1438860606000|$
+C:\Program Files (x86)\Google\Update\1.3.33.17\npGoogleUpdate3.dll|$
+1526695361241|$
+C:\Program Files (x86)\Adobe\Acrobat 11.0\Acrobat\Air\nppdf32.dll|$
+1456600849000|$
