@@ -525,6 +525,7 @@ user_pref("sanity-test.driver-version", "8.15.10.2302");
 user_pref("sanity-test.running", false);
 user_pref("sanity-test.version", "20170814072924");
 user_pref("security.disable_button.openCertManager", false);
+user_pref("security.fileuri.strict_origin_policy", false);
 user_pref("security.sandbox.content.tempDirSuffix", "{60b16e0c-cce5-4e86-a351-2c63ac72fd68}");
 user_pref("services.blocklist.addons.checked", 1502961402);
 user_pref("services.blocklist.clock_skew_seconds", 103132);
