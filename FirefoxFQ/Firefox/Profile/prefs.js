@@ -379,7 +379,7 @@ user_pref("extensions.speeddial.thumbnail-7-label", "YouTube");
 user_pref("extensions.speeddial.thumbnail-7-lastsaved", "1456644133631");
 user_pref("extensions.speeddial.thumbnail-7-layout", 2);
 user_pref("extensions.speeddial.thumbnail-7-thumbnailurl", "file:///D:/fanqiang/uploaded/logo/youtube.jpg");
-user_pref("extensions.speeddial.thumbnail-7-url", "https://www.youtube.com/user/bannedebook");
+user_pref("extensions.speeddial.thumbnail-7-url", "https://www.youtube.com/channel/UCgzGv4sCijzlnYh_uPn9Q9w/videos");
 user_pref("extensions.speeddial.thumbnail-8-dynamictitle", false);
 user_pref("extensions.speeddial.thumbnail-8-format", "png");
 user_pref("extensions.speeddial.thumbnail-8-js", false);
