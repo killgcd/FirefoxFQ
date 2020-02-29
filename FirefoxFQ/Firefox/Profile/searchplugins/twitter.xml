@@ -1,9 +1,0 @@
-<SearchPlugin xmlns="http://www.mozilla.org/2006/browser/search/" xmlns:os="http://a9.com/-/spec/opensearch/1.1/">
-<os:ShortName>Twitter</os:ShortName>
-<os:InputEncoding>UTF-8</os:InputEncoding>
-<os:Image width="16" height="16">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACXUlEQVQ4jY2TP2gTYRiHbygiqKO04KibgSI46w1OUnCrU0RoF4NXbEtDJRTrkKLoEP8UCdkOYgVDI+1ip5Ro9axQ21xyiWlrEmiSmlybkGsvd5f3u59D0tZgLH3h4Vs+Hn7v+70fx7XK5/N1K4rypPy7sKJuF7+l0+kxl8t1ljtJ8Tx/eldVgwCQqQNbJgAA0WjUeyJBMBi8BptpXyvAaJzgUQjrOlDf07a8Xq+D4zgukUicikQiXR0F8/MfbluWxYJ54N4awbVGWCjZgE2sVtn5bOzvh/W92nxFVWeTyaTgdrvPtQnC4XC/ZZo0UwDuxwhDMuHdFiGnAzkDyOjALx1QG83WYrHYK57nuzoKhBhhNE4YSxDGlSPcCcJEkrCqAcwya1NTU9ePFQzHm0n+ZvAHIZgHGBHeTE/f/a9gJE54qBAmU4RHLSaSBG+aIaUDDaOuCYJw49gZzBYZKpaNsmGj1EIjwDLNhiiKfo7jzhwK5ubm+k3TpLctgRAjLJQYOlV0cTHscDi6215BFMWbZFlmePsowYtNhmIdMBigUxOTAdSwdpeWPg21CQRBuMiMek7ZA0ZkwgOZMCwTJlMMzzcYnm0wPF1neLnJkDEAZhpFQRCutEmWJek1ALwv2IcphuRmOwcMrhJm8gCjBgKBwJ02wcDAwCW1XFphAD6WgccphtE4HTLc2g2pCoAsy+Px3PpnpZ1O59VsJvMFAGo28FMHZA2Ia80zZzQHKUnSQk9Pz/mO/6Kvr++C3+8f/74sRQq5rFKr7qRr1Z20Vq2s53NZJRQKib29vZcP7v8ByrZxV1MiGtUAAAAASUVORK5CYII=</os:Image>
-<SearchForm>http://search.twitter.com/</SearchForm>
-<os:Url type="text/html" method="GET" template="http://search.twitter.com/search" resultDomain="search.twitter.com">
-  <os:Param name="q" value="{searchTerms}"/>
-</os:Url>
-</SearchPlugin>

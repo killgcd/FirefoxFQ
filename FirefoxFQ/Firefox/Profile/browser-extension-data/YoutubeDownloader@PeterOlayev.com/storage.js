@@ -1,1 +1,0 @@
-{"userOptions":{"downloadImmediately":false,"downloadsFolder":""},"firstrun":1527985589434}
