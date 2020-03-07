@@ -1,8 +1,9 @@
 %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a %%a 
 xcopy /Y %~dp0Firefox\defaults\pref\local-settings-lt  %~dp0Firefox\defaults\pref\local-settings.js
 cls
-CD /D "%~dp0"
 @echo off
+%1 start "" mshta vbscript:CreateObject("Shell.Application").ShellExecute("cmd.exe","/c %~s0 ::","","runas",1)(window.close)&&exit
+CD /D "%~dp0"
 start "" "%~dp0psiphon\psiphon3.exe"
 echo µÈ´ýpsiphon3Æô¶¯£¬ÇëÉÔºò...
 start /wait "" "%~dp0psiphon\setting.vbs"
