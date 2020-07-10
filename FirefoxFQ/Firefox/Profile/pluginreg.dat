@@ -7,9 +7,13 @@ Arch|x86-msvc|$
 [PLUGINS]
 
 [INVALID]
-C:\Program Files (x86)\Common Files\Adobe\OOBE\PDApp\CCM\Utilities\npAdobeAAMDetect32.dll|$
-1438119102000|$
-C:\Program Files (x86)\Common Files\Adobe\OOBE\PDApp\CCM\Utilities\npAdobeAAMDetect64.dll|$
-1438119102000|$
+C:\Program Files (x86)\Microsoft Office\root\Office16\NPSPWRAP.DLL|$
+1593755058329|$
+C:\Program Files (x86)\Microsoft Office\root\VFS\ProgramFilesX86\Mozilla Firefox\plugins\npMeetingJoinPluginOC.dll|$
+1593755045287|$
 C:\Program Files (x86)\Adobe\Acrobat 11.0\Acrobat\Air\nppdf32.dll|$
 1509546452000|$
+C:\Program Files (x86)\Common Files\Adobe\OOBE\PDApp\CCM\Utilities\npAdobeAAMDetect64.dll|$
+1438119102000|$
+C:\Program Files (x86)\Common Files\Adobe\OOBE\PDApp\CCM\Utilities\npAdobeAAMDetect32.dll|$
+1438119102000|$

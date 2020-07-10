@@ -1,18 +1,18 @@
 {
 	"configs" : [
 		{
-			"remarks" : "",
-			"id" : "840BC665037A34E4C21CD840BB45A061",
-			"server" : "185.22.152.180",
-			"server_port" : 10234,
+			"remarks" : "洛杉矶H",
+			"id" : "C78A7AC1A00D752C5BC9641F1F041A09",
+			"server" : "64.32.6.195",
+			"server_port" : 2330,
 			"server_udp_port" : 0,
-			"password" : "dongtaiwang.com",
+			"password" : "dongtaiwang.com 9nice",
 			"method" : "rc4",
 			"protocol" : "origin",
 			"protocolparam" : "",
 			"obfs" : "plain",
 			"obfsparam" : "",
-			"remarks_base64" : "",
+			"remarks_base64" : "5rSb5p2J55-2SA",
 			"group" : "https://github.com/Alvin9999/new-pac/wiki",
 			"enable" : true,
 			"udp_over_tcp" : false

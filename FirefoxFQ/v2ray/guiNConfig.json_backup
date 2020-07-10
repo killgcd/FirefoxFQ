@@ -13,16 +13,16 @@
   "vmess": [
     {
       "configVersion": 2,
-      "address": "tr1.freedom101.xyz",
+      "address": "tr11.freedom101.xyz",
       "port": 443,
-      "id": "b01b3907-955c-487c-acb2-61d71919acc6",
-      "alterId": 2,
+      "id": "42f49cc3-35b0-4636-aec6-290a286b6cd7",
+      "alterId": 16,
       "security": "auto",
       "network": "ws",
-      "remarks": "tr1.freedom101.xyz",
+      "remarks": "tr11.freedom101.xyz",
       "headerType": "none",
-      "requestHost": "tr1.freedom101.xyz",
-      "path": "/2a606f24/",
+      "requestHost": "",
+      "path": "/ray",
       "streamSecurity": "tls",
       "allowInsecure": "",
       "configType": 1,
@@ -45,20 +45,13 @@
     "readBufferSize": 2,
     "writeBufferSize": 2
   },
+  "sysAgentEnabled": false,
   "listenerType": 0,
-  "speedTestUrl": "http://speedtest-sgp1.digitalocean.com/10mb.test",
-  "speedPingTestUrl": "https://www.google.com/generate_204",
-  "urlGFWList": "https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt",
+  "urlGFWList": "",
   "allowLANConn": false,
-  "enableStatistics": false,
-  "keepOlderDedupl": false,
-  "statisticsFreshRate": 0,
   "remoteDNS": "",
-  "defAllowInsecure": false,
-  "subItem": [],
+  "subItem": null,
   "uiItem": {
-    "mainSize": "0, 0",
-    "mainLvColWidth": {}
-  },
-  "userPacRule": []
+    "mainQRCodeWidth": 600
+  }
 }
