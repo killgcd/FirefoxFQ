@@ -1,2 +1,0 @@
-pref("general.config.filename", "mozilla-xx.cfg");
-pref("general.config.obscure_value", 0);
