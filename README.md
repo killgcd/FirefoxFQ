@@ -5,7 +5,7 @@
 <a href="https://github.com/killgcd/justmysocks/blob/master/README.md"><img src="https://raw.githubusercontent.com/killgcd/justmysocks/master/images/bwgss.jpg" alt="搬瓦工翻墙 Just My Socks"></a>
 
 <b>下载FirefoxFQ</b><br>
-<img src="https://github.com/killgcd/FirefoxFQ/blob/master/%E4%B8%8B%E8%BD%BDFirefoxFQ.jpg?raw=true" alt="下载FirefoxFQ.jpg">
+https://github.com/killgcd/FirefoxFQ/releases
 
 <b>使用本软件</b><br>
 下载本项目后，解压出来，请不要解压到含有中文或空格的目录路径，请不要不解压就直接从压缩包里运行！不解压会出错！ 
