@@ -5,6 +5,6 @@ git pull origin master
 git add -A
 git commit -m "update"
 git push origin master
-git tag -a "FirefoxFQ-v20210125" -m "FirefoxFQ-v20210125"
+git tag -a "FirefoxFQ-v20210425" -m "FirefoxFQ-v20210425"
 git push origin --tags
 pause
